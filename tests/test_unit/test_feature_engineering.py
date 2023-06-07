@@ -1,10 +1,12 @@
 from datetime import datetime
 
-import pandas as pd
 import numpy as np
-from formation_indus_ds_avancee.feature_engineering import create_date_features, get_season, \
-    fillna_with_previous_values, fillna_with_mean, fillna_with_median, fillna_with_mean_of_last_values
+import pandas as pd
 from pandas.testing import assert_frame_equal
+
+from formation_indus_ds_avancee.feature_engineering import (
+    create_date_features, fillna_with_mean, fillna_with_mean_of_last_values,
+    fillna_with_median, fillna_with_previous_values, get_season)
 
 
 def test_create_date_features_should_create_features_year_month_season():

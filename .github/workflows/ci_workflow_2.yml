@@ -22,10 +22,10 @@ jobs:
       - name: Run isort
         run: isort
       - name: Run Linter
-        run: flake8
+        run: flake8 formation_indus_ds_avancee
       - name: Run Vulture
-        run: vulture .
+        run: vulture formation_indus_ds_avancee
       - name: Run tests
-        run: pytest
+        run: pytest formation_indus_ds_avancee
 
 

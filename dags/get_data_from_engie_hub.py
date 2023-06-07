@@ -3,12 +3,12 @@ import sys
 from datetime import timedelta
 
 from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
 
 sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.dirname(__file__))))  # So that airflow can find config files
 
-from dags.config import TRAIN_DATA_PATH, GENERATED_DATA_FOLDER
+from dags.config import GENERATED_DATA_FOLDER, TRAIN_DATA_PATH
 from formation_indus_ds_avancee.data_loading import get_data_from_csv
 
 dag = DAG(dag_id='data_generator',

@@ -1,7 +1,8 @@
 import os
-import pandas as pd
 
+import pandas as pd
 from config import GENERATED_DATA_PATH, MODEL_PATH, PREDICTIONS_FOLDER
+
 from formation_indus_ds_avancee.feature_engineering import prepare_features
 from formation_indus_ds_avancee.train_and_predict import predict
 

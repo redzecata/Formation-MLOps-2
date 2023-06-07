@@ -28,3 +28,8 @@ jobs:
       # Add behave command
       - name: Run behave
         run: behave tests/test_functional/features
+  # qualite:
+  #   runs-on: ubuntu-latest
+  #   steps:
+      - name: Run quality BDD
+        run: python -m pytest --cov=formation_indus_ds_avancee/tests/test_unit/ -vv -p no:warnings

@@ -49,9 +49,9 @@ instructions:
 .PHONY: dataset  ## 🔽 télécharge les données et les dézippe dans le dossier data/
 dataset:
 	curl -L https://opendata-renewables.engie.com/media/datasets/01c55756-5cd6-4f60-9f63-2d771bb25a1a.zip \
-		-o data/la-haute-borne-data-2017-2020.zip
-	unzip data/la-haute-borne-data-2017-2020.zip -d data/
-	rm data/la-haute-borne-data-2017-2020.zip
+		-o data/la-haute-borne-data-2013-2016.zip
+	unzip data/la-haute-borne-data-2013-2016.zip -d data/
+	rm data/la-haute-borne-data-2013-2016.zip
 
 .PHONY: airflow-setup  ## 💨  Initialize airflow backend: initdb > variables > connections
 airflow-setup:

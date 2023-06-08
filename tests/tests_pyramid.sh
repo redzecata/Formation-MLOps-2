@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 readonly SCRIPT_DIRECTORY=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd);
-readonly APP_DIRECTORY=${SCRIPT_DIRECTORY}/..
+readonly APP_DIRECTORY=${SCRIPT_DIRECTORY}
 
 function main
 {
@@ -71,7 +71,7 @@ function count_tests
     readonly tests_folder=${1}
     readonly pattern_for_one_test=${2}
 
-    find ${APP_DIRECTORY}/tests/${tests_folder}/ -type f -exec grep -e "${pattern_for_one_test}" "{}" \; | wc -l;
+    find ${APP_DIRECTORY}/${tests_folder}/ -type f -exec grep -e "${pattern_for_one_test}" "{}" \; | wc -l;
 }
 
 main
